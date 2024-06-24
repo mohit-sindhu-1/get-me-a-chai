@@ -93,9 +93,9 @@ const PaymentPage = ({ username }) => {
             <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
             <div>
                 <div className='cover relative'>
-                    <Image className='object-cover w-full md:h-[340px] h-44 border-t border-gray-700' src={currentUser.cover_pic? currentUser.cover_pic: "https://akm-img-a-in.tosshub.com/indiatoday/images/photo_gallery/202212/weic2205a.jpg?VersionId=HFaGN3w_2oBoWlNHMzabhzmNwG3TNGtY&size=686:*"} alt="cover" />
+                    <a className='object-cover w-full md:h-[340px] h-44 border-t border-gray-700' src={currentUser.cover_pic? currentUser.cover_pic: "https://akm-img-a-in.tosshub.com/indiatoday/images/photo_gallery/202212/weic2205a.jpg?VersionId=HFaGN3w_2oBoWlNHMzabhzmNwG3TNGtY&size=686:*"} alt="cover" />
                     <div className="profilePic absolute md:left-[48%] sm:left-[44%] left-[40%] -bottom-12 md:size-32 size-20 overflow-hidden">
-                        <Image className='object-cover rounded-b-lg rounded-t-lg md:size-32 size-20' src={currentUser.profile_pic? currentUser.profile_pic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS980Jn5q36i3vGtVnUAfCF_fRggRsgGlAY7A&s"} alt="" />
+                        <a className='object-cover rounded-b-lg rounded-t-lg md:size-32 size-20' src={currentUser.profile_pic? currentUser.profile_pic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS980Jn5q36i3vGtVnUAfCF_fRggRsgGlAY7A&s"} alt="" />
                     </div>
                 </div>
 
