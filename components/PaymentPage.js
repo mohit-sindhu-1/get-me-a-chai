@@ -5,6 +5,8 @@ import { initiate, fetchUser, fetchPayments } from '@/actions/useractions'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSearchParams, useRouter } from 'next/navigation';
+import Image from "next/image";
+import avatarPic from '../public/avatar.pic'
 
 const PaymentPage = ({ username }) => {
     const [paymentForm, setPaymentForm] = useState({ name: "", message: "", amount: "" })
@@ -91,9 +93,9 @@ const PaymentPage = ({ username }) => {
             <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
             <div>
                 <div className='cover relative'>
-                    <img className='object-cover w-full md:h-[340px] h-44 border-t border-gray-700' src={currentUser.cover_pic} alt="cover" />
+                    <Image className='object-cover w-full md:h-[340px] h-44 border-t border-gray-700' src={currentUser.cover_pic} alt="cover" />
                     <div className="profilePic absolute md:left-[48%] sm:left-[44%] left-[40%] -bottom-12 md:size-32 size-20 overflow-hidden">
-                        <img className='object-cover rounded-b-lg rounded-t-lg md:size-32 size-20' src={currentUser.profile_pic} alt="" />
+                        <Image className='object-cover rounded-b-lg rounded-t-lg md:size-32 size-20' src={currentUser.profile_pic} alt="" />
                     </div>
                 </div>
 
@@ -110,7 +112,7 @@ const PaymentPage = ({ username }) => {
                             {/* display only first/top ten donations */}
                             {payments.slice(0, 10).map((e, index) => {
                                 return <li key={index} className='flex items-center gap-x-2'>
-                                    <img width={23} src="/avatar.gif" alt="user avatar" />
+                                    <Image width={23} src={avatarPic} alt="user avatar" />
                                     <span>{`${e.name} donated ₹${e.amount} with message "${e.message}"`}</span>
                                 </li>
                             })}

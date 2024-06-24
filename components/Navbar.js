@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
+import Image from "next/image";
+import teaPic from '../public/tea.gif'
 
 const Navbar = () => {
     const { data: session } = useSession()
@@ -9,7 +11,7 @@ const Navbar = () => {
     return (
         <nav className=' bg-slate-900 text-white flex justify-between items-center md:h-12 px-3 md:py-0 py-1'>
             <Link href={'/'} className='logo font-bold text-lg flex justify-center items-center'>
-                <img className='md:w-10 w-7' src="/tea.gif" alt="tea" />
+                <Image className='md:w-10 w-7' src={teaPic} alt="tea" width={40}/>
                 <span className='md:text-base text-sm'>Get Me a Chai!</span>
             </Link>
 

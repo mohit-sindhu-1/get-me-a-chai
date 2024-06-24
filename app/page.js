@@ -1,10 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
+import manPic from '../public/man.gif'
+import coinPic from '../public/coin.gif'
+import groupPic from '../public/group.gif'
+import teaPic from '../public/tea.gif'
 
 export default function Home() {
   return (
     <>
       <div className="flex justify-center items-center flex-col gap-4 text-white md:h-[45vh] py-5 md:py-0">
-        <div className="font-bold lg:text-5xl text-3xl flex justify-center items-center gap-2">Buy Me a Chai <span><img className="md:w-20 w-14" src="/tea.gif" alt="tea" /></span></div>
+        <div className="font-bold lg:text-5xl text-3xl flex justify-center items-center gap-2">Buy Me a Chai <span><Image className="md:w-20 w-14" src={teaPic} alt="tea" /></span></div>
         <p className="text-center md:text-left">A crowdfunding platform for developers. Get funded by your users.</p>
 
         <div>
@@ -21,17 +26,17 @@ export default function Home() {
         <h2 className="text-2xl font-bold text-center mb-8">Your users can buy you a Chai</h2>
         <div className="flex justify-around flex-col md:flex-row gap-y-10 md:gap-y-0">
           <div className="item space-y-3 flex flex-col justify-center items-center">
-            <img className="bg-slate-100 rounded-full p-2 " src="/man.gif" alt="man" width={88} />
+            <Image className="bg-slate-100 rounded-full p-2 " src={manPic} alt="man" width={88} />
             <p className="font-bold">Fund Yourself</p>
             <p className="text-center">Your users are available for you to help you</p>
           </div>
           <div className="item space-y-3 flex flex-col justify-center items-center">
-            <img className="bg-slate-100 rounded-full p-2 " src="/coin.gif" alt="coin" width={88} />
+            <Image className="bg-slate-100 rounded-full p-2 " src={coinPic} alt="coin" width={88} />
             <p className="font-bold">Fund Yourself</p>
             <p className="text-center">Your users are available for you to help you</p>
           </div>
           <div className="item space-y-3 flex flex-col justify-center items-center">
-            <img className="bg-slate-100 rounded-full p-2 " src="/group.gif" alt="group" width={88} />
+            <Image className="bg-slate-100 rounded-full p-2 " src={groupPic} alt="group" width={88} />
             <p className="font-bold">User want to help</p>
             <p className="text-center">Your users are available for you to help you</p>
           </div>

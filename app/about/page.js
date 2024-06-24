@@ -1,4 +1,7 @@
 import React from 'react'
+import Image from "next/image";
+import coinPic from '../public/coin.gif'
+import groupPic from '../public/group.gif'
 
 const about = () => {
   return (
@@ -6,7 +9,7 @@ const about = () => {
       <div className='container mx-auto md:px-0 px-5 py-8 text-gray-950'>
         <div className='space-y-2'>
           <h1 className='text-2xl font-semibold md:text-left text-center'>About Get Me a Chai</h1>
-          <p className='font-medium'>Get Me a Chai is a crowdfunding platform design for developers to fund their project with the support of their users. It's a space where your users can directly contribute to your creative endeavors by buying you a chai. Unlock the potential of your userbase and bring your project to life.</p>
+          <p className='font-medium'>Get Me a Chai is a crowdfunding platform design for developers to fund their project with the support of their users. It&apos;s a space where your users can directly contribute to your creative endeavors by buying you a chai. Unlock the potential of your userbase and bring your project to life.</p>
         </div>
 
         <div className='py-5 md:gap-x-8 gap-y-16 md:gap-y-0 flex md:justify-between flex-col md:flex-row'>
@@ -15,7 +18,7 @@ const about = () => {
             <div className='flex flex-col gap-3'>
               <h2 className='text-xl font-semibold md:text-left text-center'>How It Works</h2>
               <div className='flex items-center gap-2 md:flex-row flex-col'>
-                <img className='w-14' src="group.gif" alt="group" />
+                <Image className='w-14' src={groupPic} alt="group" width={56}/>
                   <p className='text-sm font-medium md:text-left text-center'>Your users are enthusiastic about collaborating with you on your project.</p>
               </div>
             </div>
@@ -53,7 +56,7 @@ const about = () => {
             <div className='flex flex-col gap-3'>
               <h2 className='text-xl font-semibold md:text-left text-center'>Support Through Chai</h2>
               <div className='flex items-center gap-2 md:flex-row flex-col'>
-                <img className='w-14' src="coin.gif" alt="coin" />
+                <Image className='w-14' src={coinPic} alt="coin" width={56}/>
                 <p className='text-sm font-medium md:text-left text-center'>Receive support from your users in the form of chai purchases</p>
               </div>
             </div>
