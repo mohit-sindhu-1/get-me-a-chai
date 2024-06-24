@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Link from 'next/link'
 import Image from "next/image";
-import teaPic from '../public/tea.gif'
+import teaPic from '/public/tea.gif'
 
 const Navbar = () => {
     const { data: session } = useSession()

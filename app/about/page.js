@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
-import coinPic from '../public/coin.gif'
-import groupPic from '../public/group.gif'
+import coinPic from '/public/coin.gif'
+import groupPic from '/public/group.gif'
 
 const about = () => {
   return (

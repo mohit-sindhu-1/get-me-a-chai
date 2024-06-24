@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import manPic from '../public/man.gif'
-import coinPic from '../public/coin.gif'
-import groupPic from '../public/group.gif'
-import teaPic from '../public/tea.gif'
+import manPic from '/public/man.gif'
+import coinPic from '/public/coin.gif'
+import groupPic from '/public/group.gif'
+import teaPic from '/public/tea.gif'
 
 export default function Home() {
   return (

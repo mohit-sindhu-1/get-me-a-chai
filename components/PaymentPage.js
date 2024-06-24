@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Image from "next/image";
-import avatarPic from '../public/avatar.pic'
+import avatarPic from '/public/avatar.pic'
 
 const PaymentPage = ({ username }) => {
     const [paymentForm, setPaymentForm] = useState({ name: "", message: "", amount: "" })
