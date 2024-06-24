@@ -4,6 +4,8 @@ import Payment from "@/models/Payment";
 import User from "@/models/User";
 import Razorpay from "razorpay";
 import connectDB from "@/db/connectDb";
+export const maxDuration = 5; // This function can run for a maximum of 60 seconds
+export const dynamic = 'force-dynamic';
 
 export const POST = async (req) => {
     await connectDB()
