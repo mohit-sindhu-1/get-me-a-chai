@@ -4,6 +4,8 @@ import GoogleProvider from "next-auth/providers/google";
 import User from '@/models/User';
 import Payment from '@/models/Payment';
 import connectDB from '@/db/connectDb';
+export const maxDuration = 60; // This function can run for a maximum of 60 seconds
+export const dynamic = 'force-dynamic';
 
 const handler = NextAuth({
     providers: [
